@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
+{% block title %}{{ block.super}} - Home{% endblock title %}
+
 {% block content %}
 <h1>Home Page</h1>
 <p>Welcome to the home page of my Django app!</p>
+{% include "snippets/welcome-user-msg.html" %}
+
+Total Visits: {{ total_visits.count }}
+Page Visits: {{ page_visits.count }}
+Percentage of Total Visits: {{ percentage }}%
+
 {% endblock content %}

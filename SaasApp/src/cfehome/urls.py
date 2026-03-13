@@ -21,4 +21,5 @@ from cfehome.views import home_page_view
 urlpatterns = [
     path('admin/', admin.site.urls),
 	path('', home_page_view, name='home'),
+	path("login/", home_page_view, name='login'),
 ]
