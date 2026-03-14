@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cfehome.views import home_page_view
+from cfehome.views import home_view, about_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-	path('', home_page_view, name='home'),
-	path("login/", home_page_view, name='login'),
+	path('', home_view, name='home'),
+	path("about/", about_view, name='about'),
+	path("login/", home_view, name='login'),
 ]
